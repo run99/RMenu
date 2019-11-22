@@ -13,7 +13,7 @@ class VegeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vege)
 
-        val array = intent.getStringArrayExtra("KEY")
+        val array = intent.getStringExtra("KEY")
 
         //mainDishのString型はここでkeepされている
         //val main = java.util.Arrays.toString(array)

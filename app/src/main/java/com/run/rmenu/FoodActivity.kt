@@ -61,21 +61,21 @@ class FoodActivity : AppCompatActivity() {
                 stapleMethod()
 
             }else if(A == 3 && B == 0 && C == 0){
-                val array = arrayOf(list[0][0],list[2][0]) // 牛、ご飯
+                val array = list[0][0] +"　"+  list[2][0] // 牛、ご飯
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
                 startActivity(intent)
 
             }else if(A == 2 && B == 1 && C == 0){
-                val array = arrayOf(list[0][1], list[2][0]) //豚、ご飯
+                val array = list[0][1] + "　" +  list[2][0] //豚、ご飯
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
                 startActivity(intent)
 
             }else if(A == 2 && B == 0 && C == 1){
-                val array = arrayOf(list[0][2], list[2][0]) //鳥、ご飯
+                val array = list[0][2] +  "　" +  list[2][0] //鳥、ご飯
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
@@ -85,28 +85,28 @@ class FoodActivity : AppCompatActivity() {
                 stapleMethod()
 
             }else if(A == 2 && B == 1 && C == 0){
-                val array = arrayOf(list[1][0], list[2][0]) //焼き魚、ご飯
+                val array = list[1][0]+"　"+ list[2][0] //焼き魚、ご飯
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
                 startActivity(intent)
 
             }else if(A == 1 && B == 2 && C == 0){
-                val array = arrayOf(list[1][1], list[2][0]) //生魚、ご飯
+                val array =  list[1][1] +  list[2][0] //生魚、ご飯
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
                 startActivity(intent)
 
             }else if(A == 1 && B ==1 && C == 1){
-                val array = arrayOf("魚", list[2][0]) //魚、ご飯
+                val array = "魚"+ "　" +  list[2][0]  //魚、ご飯
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
                 startActivity(intent)
 
             }else{
-                val array = arrayOf("米")
+                val array = "米"
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
@@ -133,49 +133,49 @@ class FoodActivity : AppCompatActivity() {
                 stapleMethod()
 
             }else if(A == 2 && B == 1 && C == 0){
-                val array = arrayOf(list[0][0], list[2][1]) //牛、麺
+                val array = list[0][0] + "　" +  list[2][1] //牛、麺
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
                 startActivity(intent)
 
             }else if(A == 1 && B == 2 && C == 0){
-                val array = arrayOf(list[0][1], list[2][1]) //豚、麺
+                val array = list[0][1] + "　" +  list[2][1] //豚、麺
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
                 startActivity(intent)
 
             }else if(A == 1 && B == 1 && C == 1){
-                val array = arrayOf(list[0][2], list[2][1]) //鳥、麺
+                val array = list[0][2] + "　" +  list[2][1] //鳥、麺
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
                 startActivity(intent)
 
             }else if(A == 1 && B == 2 && C == 0){
-                val array = arrayOf(list[1][0], list[2][1]) //焼魚、麺
+                val array = list[1][0] + "　" +  list[2][1] //焼魚、麺
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
                 startActivity(intent)
 
             }else if(A == 0 && B == 3 && C == 0){
-                val array = arrayOf(list[1][1], list[2][1]) //生魚、麺
+                val array = list[1][1] + "　" +  list[2][1] //生魚、麺
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
                 startActivity(intent)
 
             }else if(A == 0 && B == 2 && C == 1){
-                val array = arrayOf("魚",list[2][1]) //魚、麺
+                val array = "魚" + "　"  + list[2][1] //魚、麺
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
                 startActivity(intent)
 
             }else{
-                val array = arrayOf(list[2][1]) //麺
+                val array = list[2][1] //麺
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
@@ -199,49 +199,49 @@ class FoodActivity : AppCompatActivity() {
                 stapleMethod()
 
             }else if(A == 2 && B == 0 && C == 1) {
-                val array = arrayOf(list[0][0]) //牛
+                val array = list[0][0] //牛
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
                 startActivity(intent)
 
             }else if(A == 1 && B == 1 && C == 1) {
-                val array = arrayOf(list[0][1]) //豚
+                val array = list[0][1] //豚
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
                 startActivity(intent)
 
             }else if(A == 1 && B == 0 && C == 2) {
-                val array = arrayOf(list[0][2]) //鳥
+                val array = list[0][2] //鳥
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
                 startActivity(intent)
 
             }else if(A == 1 && B == 1 && C == 1) {
-                val array = arrayOf(list[1][0]) //焼き魚
+                val array = list[1][0] //焼き魚
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
                 startActivity(intent)
 
             }else if(A == 0 && B == 2 && C == 1) {
-                val array = arrayOf(list[1][1]) //生魚
+                val array = list[1][1] //生魚
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
                 startActivity(intent)
 
             }else if(A == 0 && B == 1 && C == 2){
-                val array = arrayOf("魚")
+                val array = "魚"
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)
                 startActivity(intent)
 
             }else{
-                val array = arrayOf("")
+                val array = "　"
 
                 val intent = Intent(this, VegeActivity::class.java)
                 intent.putExtra("KEY", array)

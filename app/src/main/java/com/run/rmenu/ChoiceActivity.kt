@@ -16,6 +16,7 @@ class ChoiceActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
         emotion_button.setOnClickListener {
             val intent: Intent = Intent(this, EmotionActivity::class.java)
             startActivity(intent)
