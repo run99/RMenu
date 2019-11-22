@@ -15,7 +15,7 @@ import java.util.ArrayList
 
 class PastActivity : AppCompatActivity() {
 
-    private lateinit var mRealm : Realm
+    lateinit var mRealm : Realm
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +33,8 @@ class PastActivity : AppCompatActivity() {
         rv.adapter = adapter
 
 
-       // Realm.init(this) //これいらんかも
+
+        Realm.init(this) //これいらんかも
         mRealm = Realm.getDefaultInstance()
 
 

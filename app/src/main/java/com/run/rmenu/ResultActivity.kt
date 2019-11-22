@@ -31,7 +31,7 @@ class ResultActivity : AppCompatActivity() {
         webView.webViewClient = WebViewClient()
         webView.loadUrl("https://cookpad.com/search/" + food)
 
-        Realm.init(this) //これいらんかも　DataApplicationは生かさなくていいのか
+        Realm.init(this) //DataApplicationとかに書くべき？
         mRealm = Realm.getDefaultInstance()
 
 
@@ -44,7 +44,7 @@ class ResultActivity : AppCompatActivity() {
             val intent: Intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
 
-            
+
 
         }
     }
