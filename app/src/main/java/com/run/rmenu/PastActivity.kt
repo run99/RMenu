@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import io.realm.Realm
+import io.realm.RealmConfiguration
 import io.realm.RealmObject
 import io.realm.RealmResults
 import kotlinx.android.synthetic.main.activity_past.*
@@ -15,7 +16,7 @@ import java.util.ArrayList
 
 class PastActivity : AppCompatActivity() {
 
-    lateinit var mRealm : Realm
+    //lateinit var mRealm : Realm
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,8 +35,15 @@ class PastActivity : AppCompatActivity() {
 
 
 
-        Realm.init(this) //これいらんかも
+   /*     Realm.init(this) //これいらんかも
         mRealm = Realm.getDefaultInstance()
+
+        val realmConfiguration = RealmConfiguration.Builder()
+            .deleteRealmIfMigrationNeeded()
+            .schemaVersion(0)
+            .build()
+        mRealm = Realm.getInstance(realmConfiguration)
+*/
 
 
     }
@@ -43,16 +51,11 @@ class PastActivity : AppCompatActivity() {
     private fun createDataset(): List<Data> {
 
         val dataset = ArrayList<Data>()
-        read()
+       // read()
 
 
-            val data = Data().also {
-                it.food = food.toString()
-            }
-            dataset.add(data)
 
-
-        /*for (i in 0..49) {
+        for (i in 0..49) {
             val data = Data().also {
 
                 //ここを変えていきます！！！
@@ -61,20 +64,20 @@ class PastActivity : AppCompatActivity() {
 
             }
             dataset.add(data)
-        }*/
+        }
         return dataset
     }
 
 
-   fun read() : RealmResults<Data> {
+ /*  fun read() : RealmResults<Data> {
         return mRealm.where(Data::class.java).findAll()
 
-    }
+    }*/
 
-    override fun onDestroy() {
+   /* override fun onDestroy() {
         super.onDestroy()
         mRealm.close()
-    }
+    }*/
 
 
 }

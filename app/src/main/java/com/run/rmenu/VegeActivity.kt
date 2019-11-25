@@ -1,13 +1,31 @@
 package com.run.rmenu
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_vege.*
 
 class VegeActivity : AppCompatActivity() {
 
     var count : Int = 0
+    var count2 : Int = 0
+    var count3 : Int = 0
+    var count4 : Int = 0
+    var count5 : Int = 0
+    var count6 : Int = 0
+    var count7 : Int = 0
+    var count8 : Int = 0
+
+    var text = ""
+    var text2 = ""
+    var text3 = ""
+    var text4 = ""
+    var text5 = ""
+    var text6 = ""
+    var text7 = ""
+    var text8 = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,140 +34,232 @@ class VegeActivity : AppCompatActivity() {
         val array = intent.getStringExtra("KEY")
 
         //mainDishのString型はここでkeepされている
-        //val main = java.util.Arrays.toString(array)
+        //val main = java.util.Arrays.(array)
 
         button.setOnClickListener {
             count += 1
             decisionButton.text = "決定"
 
-            if(count == 1){
-                textView2.text =""
-                textView2.text = "キャベツ"
+
+
+            when{
+                count % 2 == 0 ->{
+                    button.setBackgroundColor(Color.rgb(204,204,204))
+                    text = ""
+                }
+                count % 2 == 1 ->{
+                    button.setBackgroundColor(Color.rgb(255,140,0))
+                    text = "キャベツ"
+                }
+            }
+
+
+           /* if(count == 1){
+                text1 =""
+                text1 = "キャベツ"
 
             }else {
 
-                textView2.text = textView2.text.toString() + "　キャベツ"
-            }
+                text1 = text1 + "　キャベツ"
+            }*/
         }
 
         button2.setOnClickListener {
-            count += 1
+            count2 += 1
             decisionButton.text = "決定"
 
-            if(count == 1){
-                textView2.text =""
-                textView2.text = "大根"
+            when{
+                count2 %2 == 0 ->{
+                    button2.setBackgroundColor(Color.rgb(204,204,204))
+                    text2 = ""
+                }
+                count2 %2 == 1 ->{
+                    button2.setBackgroundColor(Color.rgb(255,140,0))
+                    text2 = "大根"
+                }
+            }
+
+           /* if(count2 == 1){
+                text1 =""
+                text1 = "大根"
 
             }else {
 
-                textView2.text = textView2.text.toString() + "　大根"
-            }
+                text1 = text1 + "　大根"
+            }*/
         }
 
         button3.setOnClickListener {
-            count += 1
+            count3 += 1
             decisionButton.text = "決定"
 
-            if(count == 1){
-                textView2.text =""
-                textView2.text = "白菜"
+            when{
+                count3%2 == 0 ->{
+                    button3.setBackgroundColor(Color.rgb(204,204,204))
+                    text3 = ""
+
+                }
+                count3%2 == 1 ->{
+                    button3.setBackgroundColor(Color.rgb(255,140,0))
+                    text3 = "白菜"
+                }
+            }
+
+           /* if(count3 == 1){
+                text1 =""
+                text1 = "白菜"
 
             }else {
 
-                textView2.text = textView2.text.toString() + "　白菜"
-            }
+                text1 = text1 + "　白菜"
+            }*/
         }
 
         button4.setOnClickListener {
-            count += 1
+            count4 += 1
             decisionButton.text = "決定"
 
-            if(count == 1){
-                textView2.text =""
-                textView2.text = "レタス"
+            when{
+                count4%2 == 0 ->{
+                    button4.setBackgroundColor(Color.rgb(204,204,204))
+                    text4 = ""
+                }
+                count4%2 == 1 ->{
+                    button4.setBackgroundColor(Color.rgb(255,140,0))
+                    text4 = "レタス"
+                }
+            }
+
+           /*if(count4 == 1){
+                text1 =""
+                text1 = "レタス"
 
             }else {
 
-                textView2.text = textView2.text.toString() + "　レタス"
-            }
+                text1 = text1 + "　レタス"
+            }*/
 
         }
 
         button5.setOnClickListener {
-            count += 1
+            count5 += 1
             decisionButton.text = "決定"
 
-            if(count == 1){
-                textView2.text =""
-                textView2.text = "じゃがいも"
+            when{
+                count5%2 == 0 ->{
+                    button5.setBackgroundColor(Color.rgb(204,204,204))
+                    text5 = ""
+                }
+                count5%2 == 1 ->{
+                    button5.setBackgroundColor(Color.rgb(255,140,0))
+                    text5 = "じゃがいも"
+                }
+            }
+
+            /*if(count5 == 1){
+                text1 =""
+                text1 = "じゃがいも"
 
             }else {
 
-                textView2.text = textView2.text.toString() + "　じゃがいも"
-            }
+                text1 = text1 + "　じゃがいも"
+            }*/
 
         }
 
         button6.setOnClickListener {
-            count += 1
+            count6 += 1
             decisionButton.text = "決定"
 
-            if(count == 1){
-                textView2.text =""
-                textView2.text = "にんじん"
+
+            when{
+                count6%2 == 0 ->{
+                    button6.setBackgroundColor(Color.rgb(204,204,204))
+                    text6 = ""
+                }
+                count6%2 == 1 ->{
+                    button6.setBackgroundColor(Color.rgb(255,140,0))
+                    text6 = "にんじん"
+                }
+            }
+
+            /*if(count6 == 1){
+                text1 =""
+                text1 = "にんじん"
 
             }else {
 
-                textView2.text = textView2.text.toString() +"　にんじん"
-            }
+                text1 = text1 +"　にんじん"
+            }*/
 
         }
 
         button7.setOnClickListener {
-            count += 1
+            count7 += 1
             decisionButton.text = "決定"
 
-            if(count == 1){
-                textView2.text =""
-                textView2.text = "ネギ"
+            when{
+                count7%2 == 0 ->{
+                    button7.setBackgroundColor(Color.rgb(204,204,204))
+                    text7 = ""
+                }
+                count7%2 == 1 ->{
+                    button7.setBackgroundColor(Color.rgb(255,140,0))
+                    text7 = "ネギ"
+                }
+            }
+
+           /* if(count7 == 1){
+                text1 =""
+                text1 = "ネギ"
 
             }else {
 
-                textView2.text = textView2.text.toString() + "　ネギ"
-            }
+                text1 = text1 + "　ネギ"
+            }*/
 
         }
 
         button8.setOnClickListener {
-            count += 1
+            count8 += 1
             decisionButton.text = "決定"
 
-            if(count == 1){
-                textView2.text =""
-                textView2.text = "もやし"
+            when{
+                count8%2 == 0 ->{
+                    button8.setBackgroundColor(Color.rgb(204,204,204))
+                    text8 = ""
+                }
+                count8%2 == 1 ->{
+                    button8.setBackgroundColor(Color.rgb(255,140,0))
+                    text8 = "もやし"
+                }
+            }
+
+            /*if(count8 == 1){
+                text1 =""
+                text1 = "もやし"
 
             }else {
-                textView2.text = textView2.text.toString() + "　もやし"
-            }
+                text1 = text1 + "　もやし"
+            }*/
 
         }
 
         decisionButton.setOnClickListener {
-            val text1 = textView2.text.toString()
+
+            val textFinal =  text + " " + text2 + " " + text3 + " " + text4 +
+                    " " + text5 +" "+ text6 + " " + text7 + " " + text8
+
+            Log.d("food", textFinal)
+
+            val food = array + " " + textFinal
 
             val intent = Intent(this, ResultActivity::class.java)
-            intent.putExtra("KEY1", array)
-            intent.putExtra("KEY2", text1)
+            intent.putExtra("KEY1", food)
             startActivity(intent)
 
-
         }
-
-        ResetButton.setOnClickListener {
-            textView2.text = ""
-        }
+        
     }
-
-
 
 }

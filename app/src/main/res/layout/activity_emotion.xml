@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#c3c3c3"
     tools:context=".EmotionActivity">
 
     <LinearLayout
@@ -22,16 +23,22 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="#ffffff"
+                android:drawableBottom="@drawable/ukiuki"
+                android:paddingBottom="32dp"
                 android:text="ウキウキ"
-                android:textSize="40sp" />
+                android:textSize="32sp" />
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="#ffffff"
+                android:drawableBottom="@drawable/happy"
+                android:paddingBottom="32dp"
                 android:text="ハッピー"
-                android:textSize="40sp" />
+                android:textSize="32sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -45,16 +52,22 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="#ffffff"
+                android:drawableBottom="@drawable/yarukinai"
+                android:paddingBottom="32dp"
                 android:text="やる気ない"
-                android:textSize="36sp" />
+                android:textSize="32sp" />
 
             <Button
                 android:id="@+id/button4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="ねむい"
-                android:textSize="40sp" />
+                android:background="#ffffff"
+                android:drawableBottom="@drawable/hima_taikutsu"
+                android:paddingBottom="32dp"
+                android:text="暇"
+                android:textSize="32sp" />
         </LinearLayout>
     </LinearLayout>
 

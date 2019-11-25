@@ -1,8 +1,10 @@
 package com.run.rmenu
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import kotlinx.android.synthetic.main.activity_food.*
 
 class FoodActivity : AppCompatActivity() {
@@ -41,8 +43,12 @@ class FoodActivity : AppCompatActivity() {
         setContentView(R.layout.activity_food)
 
         textView.text = "Q1　主菜を選んでね"
+        textView.setTextColor(Color.rgb(0,0,0))
+
         button.text = "肉"
+        button.setBackgroundResource(R.drawable.niku)
         button2.text = "魚"
+        button2.setBackgroundResource(R.drawable.fish)
         button3.text = "どっちでも"
 
 
@@ -53,9 +59,16 @@ class FoodActivity : AppCompatActivity() {
 
             if(A == 1 && B == 0&& C == 0) {
                 textView.text = questions[0]
+                textView.setTextColor(Color.rgb(0,0,0))
+
                 button.text = list[0][0]
+                button.setBackgroundResource(R.drawable.ushi)
+
                 button2.text = list[0][1]
+                button2.setBackgroundResource(R.drawable.buta)
+
                 button3.text = list[0][2]
+                button3.setBackgroundResource(R.drawable.tori)
 
             }else if(A == 2 && B == 0 && C == 0){
                 stapleMethod()
@@ -122,8 +135,14 @@ class FoodActivity : AppCompatActivity() {
 
             if(A == 0 && B == 1 && C == 0){
                 textView.text = questions[0] //好きなもの
+                textView.setTextColor(Color.rgb(0,0,0))
+
                 button.text = list[1][0] //焼
+                button.setBackgroundResource(R.drawable.yakisakana)
+
                 button2.text = list[1][1] //生
+                button2.setBackgroundResource(R.drawable.sashimi)
+
                 button3.text = list[1][2] //魚
 
             }else if(A == 1 && B == 1 && C == 0){
@@ -254,9 +273,15 @@ class FoodActivity : AppCompatActivity() {
 
     fun stapleMethod(){
         textView.text = questions[1] //主食
+        textView.setTextColor(Color.rgb(0,0,0))
+
         button.text = list[2][0] //米
+        button.setBackgroundResource(R.drawable.hakumai)
+
         button2.text = list[2][1] //麺
+        button2.setBackgroundResource(R.drawable.udon)
         button3.text = list[2][2] //どっちでも
+        button3.setBackgroundColor(Color.rgb(204,204,204))
 
     }
 }

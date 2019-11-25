@@ -10,36 +10,52 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.core.content.IntentCompat
 import io.realm.Realm
+import io.realm.RealmConfiguration
 import kotlinx.android.synthetic.main.activity_result.*
 import kotlinx.android.synthetic.main.activity_vege.*
 import java.util.*
 
 class ResultActivity : AppCompatActivity() {
 
-    private lateinit var mRealm : Realm
+  // private lateinit var mRealm : Realm
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
-        val main = intent.getStringExtra("KEY1")
-        val vege = intent.getStringExtra("KEY2")
 
-        var food  = main + "　" + vege
+        val food = intent.getStringExtra("KEY1")
+        val emotion = intent.getStringExtra("KEY2")
 
-        val webView = findViewById<View>(R.id.webView) as WebView
-        webView.webViewClient = WebViewClient()
-        webView.loadUrl("https://cookpad.com/search/" + food)
+        if (food != null){
+            val webView = findViewById<View>(R.id.webView) as WebView
+            webView.webViewClient = WebViewClient()
+            webView.loadUrl("https://cookpad.com/search/" + food)
 
-        Realm.init(this) //DataApplicationとかに書くべき？
-        mRealm = Realm.getDefaultInstance()
+        }else {
+            val webView = findViewById<View>(R.id.webView) as WebView
+            webView.webViewClient = WebViewClient()
+            webView.loadUrl("https://cookpad.com/search/" + emotion)
+
+        }
+
+
+
+        //Realm.init(this) //DataApplicationとかに書くべき？
+       /* mRealm = Realm.getDefaultInstance()
+        val realmConfiguration = RealmConfiguration.Builder()
+            .deleteRealmIfMigrationNeeded()
+            .schemaVersion(0)
+            .build()
+        mRealm = Realm.getInstance(realmConfiguration)*/
+
 
 
         //RMenuのリストには、検索ワードをいれる
         //resultActivityには、クラシルとかクックパッドとかのボタン配置して、ブラウザに飛ぶとかしても良さそう
 
         SaveButton.setOnClickListener {
-            create(food)
+           // create(food)
 
             val intent: Intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -49,7 +65,7 @@ class ResultActivity : AppCompatActivity() {
         }
     }
 
-    fun create(food :String, price: Long = 0){
+   /* fun create(food :String, price: Long = 0){
         mRealm.executeTransaction{
             var Data = mRealm.createObject(Data::class.java, UUID.randomUUID().toString())
             Data.food = food
@@ -58,7 +74,7 @@ class ResultActivity : AppCompatActivity() {
             Log.d("food", food)
             mRealm.copyToRealm(Data)
         }
-    }
+    }*/
 
 
 
@@ -66,8 +82,8 @@ class ResultActivity : AppCompatActivity() {
 
 
 
-    override fun onDestroy() {
+   /* override fun onDestroy() {
         super.onDestroy()
         mRealm.close()
-    }
+    }*/
 }
