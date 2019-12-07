@@ -1,10 +1,9 @@
-package com.run.rmenu
+package com.run.recommenu
 
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import kotlinx.android.synthetic.main.activity_food.*
 
 class FoodActivity : AppCompatActivity() {
@@ -46,10 +45,13 @@ class FoodActivity : AppCompatActivity() {
         textView.setTextColor(Color.rgb(0,0,0))
 
         button.text = "肉"
-        button.setBackgroundResource(R.drawable.niku)
+        button.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.niku,0,0)
         button2.text = "魚"
-        button2.setBackgroundResource(R.drawable.fish)
+        button2.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.fish,0,0)
         button3.text = "どっちでも"
+       // button3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.niku, 0,R.drawable.fish,0)
+
+
 
 
 
@@ -62,13 +64,13 @@ class FoodActivity : AppCompatActivity() {
                 textView.setTextColor(Color.rgb(0,0,0))
 
                 button.text = list[0][0]
-                button.setBackgroundResource(R.drawable.ushi)
+                button.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.ushi,0,0)
 
                 button2.text = list[0][1]
-                button2.setBackgroundResource(R.drawable.buta)
+                button2.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.buta,0,0)
 
                 button3.text = list[0][2]
-                button3.setBackgroundResource(R.drawable.tori)
+                button3.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.tori,0,0)
 
             }else if(A == 2 && B == 0 && C == 0){
                 stapleMethod()
@@ -138,12 +140,16 @@ class FoodActivity : AppCompatActivity() {
                 textView.setTextColor(Color.rgb(0,0,0))
 
                 button.text = list[1][0] //焼
-                button.setBackgroundResource(R.drawable.yakisakana)
+                button.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.yakisakana,0,0)
+
 
                 button2.text = list[1][1] //生
-                button2.setBackgroundResource(R.drawable.sashimi)
+                button2.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.sashimi,0,0)
+
 
                 button3.text = list[1][2] //魚
+                button3.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.fish,0,0)
+
 
             }else if(A == 1 && B == 1 && C == 0){
                 stapleMethod()
@@ -276,12 +282,14 @@ class FoodActivity : AppCompatActivity() {
         textView.setTextColor(Color.rgb(0,0,0))
 
         button.text = list[2][0] //米
-        button.setBackgroundResource(R.drawable.hakumai)
+        button.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.hakumai,0,0)
 
         button2.text = list[2][1] //麺
-        button2.setBackgroundResource(R.drawable.udon)
-        button3.text = list[2][2] //どっちでも
-        button3.setBackgroundColor(Color.rgb(204,204,204))
+        button2.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.udon,0,0)
 
+        button3.text = list[2][2] //どっちでも
+       // button3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.hakumai,0,R.drawable.udon,0)
+        button3.setBackgroundColor(Color.rgb(204,204,204))
+        button3.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
     }
 }

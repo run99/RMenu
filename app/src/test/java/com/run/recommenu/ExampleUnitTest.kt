@@ -1,4 +1,4 @@
-package com.run.rmenu
+package com.run.recommenu
 
 import org.junit.Test
 

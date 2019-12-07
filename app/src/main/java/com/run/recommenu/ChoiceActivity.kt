@@ -1,4 +1,4 @@
-package com.run.rmenu
+package com.run.recommenu
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

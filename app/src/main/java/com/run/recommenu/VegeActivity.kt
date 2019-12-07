@@ -1,4 +1,4 @@
-package com.run.rmenu
+package com.run.recommenu
 
 import android.content.Intent
 import android.graphics.Color
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_vege.*
+
 
 class VegeActivity : AppCompatActivity() {
 
@@ -232,8 +233,12 @@ class VegeActivity : AppCompatActivity() {
                 count8%2 == 1 ->{
                     button8.setBackgroundColor(Color.rgb(255,140,0))
                     text8 = "もやし"
+
+
                 }
             }
+
+
 
             /*if(count8 == 1){
                 text1 =""
@@ -247,12 +252,13 @@ class VegeActivity : AppCompatActivity() {
 
         decisionButton.setOnClickListener {
 
+
             val textFinal =  text + " " + text2 + " " + text3 + " " + text4 +
                     " " + text5 +" "+ text6 + " " + text7 + " " + text8
 
             Log.d("food", textFinal)
 
-            val food = array + " " + textFinal
+            val food = "$array $textFinal"
 
             val intent = Intent(this, ResultActivity::class.java)
             intent.putExtra("KEY1", food)
